@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout1"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <TextView
+        android:id="@+id/idText"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:padding="5dp"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/NameText"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:ellipsize="end"
+        android:padding="5dp"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/PhoneText"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:ellipsize="end"
+        android:padding="5dp"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/EmailText"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:ellipsize="end"
+        android:padding="5dp"
+        android:singleLine="true" />
+
+</LinearLayout>

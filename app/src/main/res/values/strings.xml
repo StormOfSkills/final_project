@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Tutorial</string>
+    <string name="name">Name</string>
+    <string name="phone">Phone</string>
+    <string name="e_mail">E-Mail</string>
+    <string name="delete">Delete</string>
+    <string name="update">Update</string>
+    <string name="search">Search</string>
+</resources>
