@@ -24,11 +24,11 @@ public class MainActivity extends Activity {
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
             StrictMode.setThreadPolicy(policy);
         }
-        // initilizing propreties
+
         this.onInsert=(Button)findViewById(R.id.onInsert);
         this.onSyn=(Button)findViewById(R.id.onSyn);
         this.syn=new Syn();
-        // preparing listener (onAction)
+
         this.onInsert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

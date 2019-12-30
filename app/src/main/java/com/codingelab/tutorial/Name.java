@@ -22,11 +22,9 @@ public class Name {
     public String getPhone() {
         return phone;
     }
-
     public String getEmail() {
         return email;
     }
-
     public int getStatus(){
             return status;
         }

@@ -35,17 +35,14 @@ public class ListAdapter extends BaseAdapter {
     }
 
     public int getCount() {
-        // TODO Auto-generated method stub
         return ID.size();
     }
 
     public Object getItem(int position) {
-        // TODO Auto-generated method stub
         return null;
     }
 
     public long getItemId(int position) {
-        // TODO Auto-generated method stub
         return 0;
     }
 

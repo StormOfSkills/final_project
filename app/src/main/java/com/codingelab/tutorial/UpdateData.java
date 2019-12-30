@@ -11,7 +11,7 @@ import android.widget.EditText;
 import static com.codingelab.tutorial.R.layout.activity_update;
 
 public class UpdateData extends AppCompatActivity {
-    private EditText editname,editphone,editemail;
+    private EditText editname, editphone, editemail;
     private Button update,cancel;
     private Syn syn;
     public static   String id;

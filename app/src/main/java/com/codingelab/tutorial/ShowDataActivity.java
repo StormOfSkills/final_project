@@ -45,28 +45,21 @@ public class ShowDataActivity extends AppCompatActivity {
         {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-                // TODO Auto-generated method stub
-
                 Toast.makeText(ShowDataActivity.this, ListViewClickItemArray.get(position).toString(), Toast.LENGTH_LONG).show();
-
             }
         });
-
     }
 
     @Override
     protected void onResume() {
 
         ShowSQLiteDBdata() ;
-
         super.onResume();
     }
 
     private void ShowSQLiteDBdata() {
 
         sqLiteDatabase = sqLiteHelper.getWritableDatabase();
-
         cursor = sqLiteDatabase.rawQuery("SELECT * FROM "+SQLiteHelper.TABLE_NAME+"", null);
 
         ID_Array.clear();
@@ -76,24 +69,15 @@ public class ShowDataActivity extends AppCompatActivity {
 
         if (cursor.moveToFirst()) {
             do {
-
                 ID_Array.add(cursor.getString(cursor.getColumnIndex(SQLiteHelper.Table_Column_ID)));
-
-                //Inserting Column Name into Array to Use at ListView Click Listener Method.
                 ListViewClickItemArray.add(cursor.getString(cursor.getColumnIndex(SQLiteHelper.Table_Column_Name)));
-
                 NAME_Array.add(cursor.getString(cursor.getColumnIndex(SQLiteHelper.Table_Column_Name)));
-
                 Phone_Array.add(cursor.getString(cursor.getColumnIndex(SQLiteHelper.Table_Column_Phone)));
                 Emai_Array.add(cursor.getString(cursor.getColumnIndex(SQLiteHelper.Table_Column_Email)));
-
-
-
             } while (cursor.moveToNext());
         }
 
         listAdapter = new ListAdapter(ShowDataActivity.this,
-
                 ID_Array,
                 NAME_Array,
                 Phone_Array,
@@ -101,7 +85,6 @@ public class ShowDataActivity extends AppCompatActivity {
         );
 
         LISTVIEW.setAdapter(listAdapter);
-
         cursor.close();
     }
 }

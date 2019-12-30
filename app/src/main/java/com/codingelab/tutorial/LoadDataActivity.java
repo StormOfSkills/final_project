@@ -44,7 +44,7 @@ public class LoadDataActivity extends AppCompatActivity {
 
         }
         this.syn=new Syn();
-        this.getJSON("http://192.168.8.108:8080/android/getdata.php");
+        this.getJSON("http://192.168.43.8:8080/sqli/getdata.php");
         SubjectListView = (ListView) findViewById(R.id.listuser);
         update = (Button) findViewById(R.id.btn_Update);
         delete = (Button) findViewById(R.id.btn_Delete);
@@ -76,6 +76,7 @@ public class LoadDataActivity extends AppCompatActivity {
                 add.putExtra("lphone",lphone);
                 add.putExtra("lemail",lemil);
                 startActivity(add);
+                Toast.makeText(getBaseContext(),"Record Updated",Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -84,6 +85,7 @@ public class LoadDataActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String msg = syn.doInBackground("delete",sid);
                 Toast.makeText(getBaseContext(), msg, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getBaseContext(),"Record Deleted",Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -140,7 +142,6 @@ public class LoadDataActivity extends AppCompatActivity {
     private void loadIntoListView(String json) throws JSONException {
         JSONArray jsonArray = new JSONArray(json);
         ArrayList<HashMap<String, String>> Items = new ArrayList<HashMap<String, String>>();
-        //String[] name = new String[jsonArray.length()];
         for (int i = 0; i < jsonArray.length(); i++) {
             JSONObject obj = jsonArray.getJSONObject(i);
             HashMap<String, String> map = new HashMap<String, String>();

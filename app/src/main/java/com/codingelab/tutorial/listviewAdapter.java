@@ -46,7 +46,6 @@ public class listviewAdapter extends BaseAdapter {
 
         ViewHolder holder;
         LayoutInflater inflater = activity.getLayoutInflater();
-
         if (convertView == null) {
             convertView = inflater.inflate(R.layout.listview_row, null);
             holder = new ViewHolder();
@@ -59,7 +58,6 @@ public class listviewAdapter extends BaseAdapter {
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
-
         Person item = personlist.get(position);
         holder.mSid.setText(item.getId().toString());
         holder.mName.setText(item.getName().toString());
